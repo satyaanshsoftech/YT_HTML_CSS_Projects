@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  background-color: #0c1e29;
+}
+
+/* styles for left navbar */
+.navLogo img {
+  height: 4rem;
+  border-radius: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* styles for center navbar */
+.navLinks ul {
+  display: flex;
+  justify-content: center;
+  background-color: #07334e;
+  color: #fff;
+  border-radius: 2rem;
+  width: 35rem;
+  padding: 0.7rem 0;
+}
+
+.navLinks ul li {
+  list-style-type: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+}
+
+.navLinks li:hover {
+  background-color: #fff;
+  color: #07334e;
+  cursor: pointer;
+}
+
+/* styles for right navbar */
+.navIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navIcons button {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+.navIcons img {
+  height: 2rem;
+}
+
+.navIcons span{
+    position: relative;
+}
+
+.navIcons button:hover {
+  cursor: pointer;
+  background-color: #07334e;
+  color: #fff;
+}
+
+.navIcons span:hover {
+  cursor: pointer;
+}
+
+.navIcons span::before {
+  position: absolute;
+  bottom: -2.9rem;
+  left: -2.9rem;
+  content: "+91-9992026088";
+  color: #fff;
+  height: 2rem;
+  width: 10rem;
+  transform: scale(0);
+  transform-origin: center;
+  transition: all .5s;
+}
+
+.navIcons span:hover::before{
+    transform: scale(1);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar1.css" />
+    <title>Navbar Design 1</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- nav left -->
+      <div class="navImgDiv">
+        <img src="/assets/satyaanshSoftechNewLogo.jpg" />
+      </div>
+
+      <!-- nav center -->
+      <div class="navLinks">
+        <ul class="navUL">
+          <li><a>Home</a></li>
+          <li><a>Services</a></li>
+          <li><a>Projects</a></li>
+          <li><a>Courses</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- nav right -->
+      <div class="actionBtn">
+        <button><span>Sign In</span></button>
+        <button><span>Sign Up</span></button>
+      </div>
+
+      <!-- menu icon -->
+      <div class="navMenuDiv">
+        <img class="menuIcon" src="/assets/menuIcon.png" alt="menu icon" />
+      </div>
+    </div>
+
+    <script>
+      const menuIcon = document.querySelector(".menuIcon");
+      const navUL = document.querySelector(".navUL");
+      let menuToggle = true;
+
+      menuIcon.addEventListener("click", () => {
+        if (!menuToggle) {
+          menuToggle = true;
+          navUL.style.display = "none";
+        } else {
+          menuToggle = false;
+          navUL.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

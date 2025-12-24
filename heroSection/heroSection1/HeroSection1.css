@@ -1,0 +1,230 @@
+/* styles for images and icons */
+.iconAndButtonDiv img,
+.iconAndButtonDivWT img {
+  height: 1.2rem;
+}
+
+.heroSectionRight img {
+  height: 25rem;
+}
+
+.heroSectionRight {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+  
+.heroSectionRightImg1 {
+  border-top-left-radius: 35%;
+}
+
+.heroSectionRightImg2 {
+  width: 45%;
+  object-fit: cover;
+}
+
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #fffef9; */
+}
+
+/* styles for main container */
+.heroWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-image: url("/assets/heroSectionAssets/heroSection1Assets/HeroSection1BG.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fffef9;
+  height: 30rem;
+}
+
+/* left section */
+.heroSectionLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 0;
+  padding: 2rem 0;
+}
+
+/* left section text */
+.heroSectionText {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroSectionText h2 {
+  font-size: 3rem;
+}
+
+.heroSectionText p {
+  font-size: 1.2rem;
+  color: #575656;
+}
+
+/* left section action btns */
+.heroSectionActionBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.requestBtn {
+  width: 8rem;
+  height: 2.5rem;
+  background-color: black;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.iconAndButtonDivWT {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.iconAndButtonDivWT button {
+  font-weight: 500;
+  font-size: 0.8rem;
+  border: none;
+  background-color: transparent;
+}
+
+/* input styles */
+.actionInputAndBtn {
+  display: flex;
+  flex-grow: 0;
+}
+
+.actionInputAndBtn input {
+  padding-left: 1rem;
+  border: 1px solid black;
+  font-size: 0.8rem;
+}
+
+.actionInputAndBtn button {
+  width: 5rem;
+  height: 2.5rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  background-color: black;
+  color: #fff;
+}
+
+/* media queries */
+@media (max-width:1024px){
+  .heroSectionActionBtns{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 65%;
+    justify-content: center;
+  }
+
+  .heroSectionText{
+    width: 70%;
+  }
+
+  .heroSectionText h2{
+    font-size: 2rem;
+  }
+
+  .heroSectionText p{
+    font-size: 1rem;
+  }
+ 
+  .actionInputAndBtn input{
+    width: 11rem;
+  }
+
+  .heroSectionRight img{
+    height: 20rem ;
+  }
+
+  .heroWrapper{
+    height: 20rem;
+  }
+}
+
+@media (max-width:768px){
+   .heroSectionText p{
+    font-size: .8rem;
+  }
+
+  .heroSectionText{
+    width: 58%;
+  }
+
+  .heroSectionText h2{
+    font-size: 1.8rem;
+  }
+
+  .heroSectionActionBtns{
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 1rem;
+    /* left: 10rem; */
+    width: 90%;
+  }
+
+  .heroWrapper{
+    position: relative;
+    height: 23rem;
+  }
+ 
+}
+
+@media (max-width:426px){
+  .heroWrapper{
+    height: 48rem;
+  }
+  .heroSectionRightImg2{
+    display: none;
+  }
+
+  .heroWrapper{
+    flex-direction: column;
+  }
+
+  .heroSectionActionBtns{
+    flex-direction: column;
+    position: initial;
+  }
+  
+  .heroSectionText{
+    width: 100%;
+    text-align: center;
+  }
+
+  .heroSectionText h2{
+    font-size: 2.5rem;
+  }
+
+  .heroSectionActionBtns{
+    width: 100%;
+    gap: 2rem;  
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+   .actionInputAndBtn input{
+    width: 9rem;
+  }
+
+  .heroSectionRightImg1{
+    width: 100%;
+  }
+}
+/* 
+@media (min-width:1254){
+  .heroSectionText h2{
+    font-size: 1.5rem;
+  }
+} */

@@ -1,0 +1,153 @@
+/* styles for main container */
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.navImgDiv img {
+  height: 4rem;
+  border-radius: 100%;
+}
+
+/* styles for nav links */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  position: relative;
+}
+
+/* targeting "a" tag for animation */
+ul li a::before {
+  content: "";
+  position: absolute;
+  background-color: #3d3d3d;
+  height: 2px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+ul li a:hover::before,
+ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: #3d3d3d;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: right;
+}
+
+/* styles for action buttons */
+.actionBtn {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionBtn button {
+  padding: 0.4rem;
+  width: 6rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 0.4rem;
+  font-size: 1.04rem;
+}
+
+.actionBtn button:hover {
+  cursor: pointer;
+  background-color: #07334e;
+  color: #fff;
+}
+
+.navMenuDiv {
+  display: none;
+}
+
+.navMenuDiv img {
+  height: 2.5rem;
+}
+
+/* media queries */
+/* max width targets screens below the breakpoint */
+/* min width targets screens above the breakpoint */
+/* for desktop first-> max-width */
+/* for mobile first-> min-width */
+
+@media (max-width: 841px) {
+  ul li a {
+    font-size: 0.8rem;
+  }
+  .actionBtn button {
+    font-size: 0.8rem;
+    width: 4rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 687px) {
+  ul li a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 657px) {
+  .actionBtn button {
+    display: none;
+  }
+}
+
+@media (max-width: 553px) {
+  .navMenuDiv {
+    display: block;
+  }
+  ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding-top: 1rem;
+  }
+  ul li {
+    padding: 0.7rem;
+    text-align: right;
+  }
+  ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  ul li a {
+    font-size: 0.8rem;
+  }
+}
