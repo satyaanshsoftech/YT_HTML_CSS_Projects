@@ -1,0 +1,158 @@
+body{
+     font-family: "Playfair Display", serif;
+     margin: 0;
+     padding: 0;
+}
+
+/* main carousel styles */
+.carouselWrapper{
+    display: flex;
+    align-items: top;
+    /* background-color: #ff5e11; */
+    height: 39.5rem;
+    
+}
+
+/* carousel left styles */
+.carouselLeft{
+    width: 50%;
+    height: 35rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.carouselLeft img{
+    height: 4rem;
+    position: absolute;
+}
+
+.carouselLeft .woodenBg{
+    height: 30rem;
+    transform: rotate(40deg);
+    top: -6rem;
+    left: -6rem;
+    border-radius: 2.5rem;
+}
+
+.carouselLeft .tomato{
+    height: 5rem;
+    transform: rotate(40deg);
+    top: 1rem;
+    left: 22rem;
+    border-radius: 2.5rem;
+}
+
+.carouselLeft .fries{
+    height: 20rem;
+    top: -2rem;
+    left: -2rem;
+    transform: rotate(-30deg);
+}
+
+.carouselLeft .flower{
+       height: 7rem;
+    top: 19rem;
+    left: -.5rem;
+}
+
+.carouselLeft .ketchup1{
+       height: 7rem;
+    top: 15rem;
+    left: -4rem;
+}
+
+.carouselLeft .ketchup2{
+       height: 7rem;
+    top: 23rem;
+    left: -4rem;
+}
+
+/* burger tray styles */
+.carouselLeftFront{
+    z-index: 2;
+    position: absolute;
+    top: 12rem;
+    left: 15rem;
+}
+
+.carouselLeftFront img{
+    position: absolute;
+}
+
+.carouselLeftFront .woodenTray{
+    height: 22rem;
+    transform: rotate(-40deg);
+    left: -6rem;
+    top: -5rem;
+}
+
+.carouselLeftFront .burger{
+    height: 17rem;
+    left: -5rem;
+    top: -1rem;
+}
+
+.carouselLeftFront .leaves{
+    height: 8rem;
+    left: 6rem;
+    top: -4.5rem;
+    transform: rotate(-160deg);
+}
+
+
+/* carousel right styles */
+.carouselRight{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    position: relative;
+   overflow: hidden;
+}
+
+.carouselRightText{
+    width: 60%;
+}
+
+.carouselRightText h1{
+    font-size: 3rem;
+}
+
+.carouselRightText span{
+    font-size: 5rem;
+    color: #ff5e11;
+}
+
+.carouselRightText p{
+    font-size: .9rem;
+    line-height: 1.7rem;
+    color: #545454;
+}
+
+.carouselRight button{
+    color: #fff;
+    background-color: #ff5e11;
+    border: none;
+    font-size: .8rem;
+    font-weight: 800;
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+}
+
+.carouselRight img{
+    position: absolute;
+}
+
+.carouselRight .splash{
+    height: 55rem;
+    bottom: 0rem;
+    right: 0;
+    opacity: 80%;
+}
+
+.carouselRight .leaves{
+    height: 10rem;
+    bottom: -2rem;
+    right: -2rem;
+    opacity: 70%;
+}
