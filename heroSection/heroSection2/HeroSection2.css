@@ -1,158 +1,450 @@
-body{
-     font-family: "Playfair Display", serif;
-     margin: 0;
-     padding: 0;
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* main carousel styles */
-.carouselWrapper{
-    display: flex;
-    align-items: top;
-    /* background-color: #ff5e11; */
-    height: 39.5rem;
-    
+.carouselWrapper {
+  display: flex;
+  align-items: top;
+  /* background-color: #ff5e11; */
+  height: 39.5rem;
 }
 
 /* carousel left styles */
-.carouselLeft{
-    width: 50%;
-    height: 35rem;
-    position: relative;
-    overflow: hidden;
+.carouselLeft {
+  width: 50%;
+  height: 35rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.carouselLeft img{
-    height: 4rem;
-    position: absolute;
+.carouselLeft img {
+  height: 4rem;
+  position: absolute;
 }
 
-.carouselLeft .woodenBg{
-    height: 30rem;
-    transform: rotate(40deg);
-    top: -6rem;
+.carouselLeft .woodenBg {
+  height: 30rem;
+  transform: rotate(40deg);
+  top: -6rem;
+  left: -6rem;
+  border-radius: 2.5rem;
+}
+
+.carouselLeft .tomato {
+  height: 5rem;
+  transform: rotate(40deg);
+  top: 1rem;
+  left: 22rem;
+  border-radius: 2.5rem;
+}
+
+.carouselLeft .fries {
+  height: 20rem;
+  top: -2rem;
+  left: -2rem;
+  transform: rotate(-30deg);
+}
+
+.carouselLeft .flower {
+  height: 7rem;
+  top: 19rem;
+  left: -0.5rem;
+}
+
+.carouselLeft .ketchup1 {
+  height: 7rem;
+  top: 15rem;
+  left: -4rem;
+}
+
+.carouselLeft .ketchup2 {
+  height: 7rem;
+  top: 23rem;
+  left: -4rem;
+}
+
+/* burger tray styles */
+.carouselLeftFront {
+  z-index: 2;
+  position: absolute;
+  top: 12rem;
+  left: 15rem;
+}
+
+.carouselLeftFront img {
+  position: absolute;
+}
+
+.carouselLeftFront .woodenTray {
+  height: 22rem;
+  transform: rotate(-40deg);
+  left: -6rem;
+  top: -5rem;
+}
+
+.carouselLeftFront .burger {
+  height: 17rem;
+  left: -5rem;
+  top: -1rem;
+}
+
+.carouselLeftFront .leaves {
+  height: 8rem;
+  left: 6rem;
+  top: -4.5rem;
+  transform: rotate(-160deg);
+}
+
+/* carousel right styles */
+.carouselRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselRightText {
+  width: 60%;
+}
+
+.carouselRightText h1 {
+  font-size: 3rem;
+}
+
+.carouselRightText span {
+  font-size: 5rem;
+  color: #ff5e11;
+}
+
+.carouselRightText p {
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  color: #545454;
+}
+
+.carouselRight button {
+  color: #fff;
+  background-color: #ff5e11;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.carouselRight img {
+  position: absolute;
+}
+
+.carouselRight .splash {
+  height: 55rem;
+  bottom: 0rem;
+  right: 0;
+  opacity: 80%;
+}
+
+.carouselRight .leaves {
+  height: 10rem;
+  bottom: -2rem;
+  right: -2rem;
+  opacity: 70%;
+}
+
+/* media queries */
+@media (max-width: 1441px) {
+  .carouselWrapper {
+    height: 40rem;
+  }
+  .carouselLeft .woodenBg {
+    height: 33rem;
+  }
+  .carouselLeftFront .woodenTray {
     left: -6rem;
+    top: -5rem;
+    height: 25rem;
+  }
+  .carouselLeftFront .burger {
+    height: 18rem;
+    left: -4rem;
+    top: 1rem;
+  }
+  .carouselLeftFront .leaves {
+    height: 8rem;
+    left: 6rem;
+    top: -2.5rem;
+  }
+  .carouselLeft .tomato {
+    height: 5rem;
+    transform: rotate(40deg);
+    top: 0rem;
+    left: 22rem;
     border-radius: 2.5rem;
+  }
+  .carouselRightText p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #545454;
+  }
+  .carouselRight button {
+    font-size: 1.2rem;
+  }
 }
 
-.carouselLeft .tomato{
-    height: 5rem;
+@media (max-width: 1025px) {
+  .carouselWrapper {
+    height: 35rem;
+  }
+  .carouselLeft .woodenBg {
+    height: 30rem;
+  }
+  .carouselLeftFront .woodenTray {
+    left: -6rem;
+    top: -5rem;
+    height: 22rem;
+  }
+  .carouselLeftFront .burger {
+    height: 15rem;
+    left: -4rem;
+    top: 1rem;
+  }
+  .carouselRight .splash {
+    height: 38rem;
+    bottom: 0rem;
+    right: 0;
+    opacity: 80%;
+  }
+}
+
+@media (max-width: 769px) {
+  .carouselWrapper {
+    height: 32rem;
+  }
+  .carouselLeft .woodenBg {
+    height: 25rem;
+  }
+  .carouselLeftFront .woodenTray {
+    left: -10rem;
+    top: -8rem;
+    height: 18rem;
+  }
+  .carouselLeftFront .burger {
+    height: 12rem;
+    left: -8rem;
+    top: -3rem;
+  }
+  .carouselRight .splash {
+    height: 38rem;
+    bottom: 0rem;
+    right: 0;
+    opacity: 80%;
+  }
+  .carouselLeftFront .leaves {
+    height: 6rem;
+    left: -2rem;
+    top: -6rem;
+  }
+  .carouselLeft .fries {
+    height: 16rem;
+    top: -2rem;
+    left: -2rem;
+    transform: rotate(-30deg);
+  }
+  .carouselLeft .tomato {
+    height: 4rem;
+    transform: rotate(40deg);
+    top: 1rem;
+    left: 20rem;
+    border-radius: 2.5rem;
+  }
+
+  .carouselRightText {
+    width: 80%;
+  }
+
+  .carouselRightText h1 {
+    font-size: 2.5rem;
+  }
+
+  .carouselRightText span {
+    font-size: 4rem;
+    color: #ff5e11;
+  }
+
+  .carouselRightText p {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    color: #545454;
+  }
+
+  .carouselRight button {
+    color: #fff;
+    background-color: #ff5e11;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .carouselRight .splash {
+    height: 40rem;
+    bottom: 0rem;
+    right: 0;
+    opacity: 80%;
+  }
+
+  .carouselRight .leaves {
+    height: 9rem;
+    bottom: 0rem;
+    right: -2rem;
+    opacity: 70%;
+  }
+}
+
+@media (max-width: 426px) {
+  .carouselWrapper {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .carouselLeft,
+  .carouselRight {
+    width: 100%;
+  }
+  .carouselRightText {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+  }
+  .carouselRightActionBtn {
+    width: 80%;
+    place-self: center;
+  }
+  .carouselLeft .woodenBg {
+    height: 33rem;
+  }
+  .carouselLeftFront .woodenTray {
+    left: -12rem;
+    top: -8rem;
+    height: 22rem;
+  }
+  .carouselLeftFront .burger {
+    height: 15rem;
+    left: -10rem;
+    top: -3rem;
+  }
+  .carouselLeftFront .leaves {
+    height: 6rem;
+    left: 0rem;
+    top: -5rem;
+  }
+  .carouselLeft .tomato {
+    height: 4rem;
     transform: rotate(40deg);
     top: 1rem;
     left: 22rem;
     border-radius: 2.5rem;
-}
-
-.carouselLeft .fries{
-    height: 20rem;
-    top: -2rem;
-    left: -2rem;
-    transform: rotate(-30deg);
-}
-
-.carouselLeft .flower{
-       height: 7rem;
-    top: 19rem;
-    left: -.5rem;
-}
-
-.carouselLeft .ketchup1{
-       height: 7rem;
-    top: 15rem;
-    left: -4rem;
-}
-
-.carouselLeft .ketchup2{
-       height: 7rem;
-    top: 23rem;
-    left: -4rem;
-}
-
-/* burger tray styles */
-.carouselLeftFront{
-    z-index: 2;
-    position: absolute;
-    top: 12rem;
-    left: 15rem;
-}
-
-.carouselLeftFront img{
-    position: absolute;
-}
-
-.carouselLeftFront .woodenTray{
-    height: 22rem;
-    transform: rotate(-40deg);
-    left: -6rem;
-    top: -5rem;
-}
-
-.carouselLeftFront .burger{
-    height: 17rem;
-    left: -5rem;
-    top: -1rem;
-}
-
-.carouselLeftFront .leaves{
-    height: 8rem;
-    left: 6rem;
-    top: -4.5rem;
-    transform: rotate(-160deg);
-}
-
-
-/* carousel right styles */
-.carouselRight{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 50%;
-    position: relative;
-   overflow: hidden;
-}
-
-.carouselRightText{
-    width: 60%;
-}
-
-.carouselRightText h1{
-    font-size: 3rem;
-}
-
-.carouselRightText span{
-    font-size: 5rem;
-    color: #ff5e11;
-}
-
-.carouselRightText p{
-    font-size: .9rem;
-    line-height: 1.7rem;
+  }
+  .carouselRightText p {
+    font-size: 1rem;
+    line-height: 2rem;
     color: #545454;
+  }
+  .carouselRight button {
+    font-size: 1.2rem;
+  }
+  .carouselRight .splash {
+    height: 30rem;
+    bottom: 0rem;
+    right: -2rem;
+    opacity: 70%;
+  }
+  .carouselRight .leaves {
+    height: 7rem;
+  }
 }
 
-.carouselRight button{
-    color: #fff;
-    background-color: #ff5e11;
-    border: none;
-    font-size: .8rem;
-    font-weight: 800;
-    border-radius: 2rem;
-    padding: .5rem 2rem;
-}
-
-.carouselRight img{
-    position: absolute;
-}
-
-.carouselRight .splash{
-    height: 55rem;
+@media (max-width: 376px) {
+  .carouselLeft .tomato {
+    height: 4rem;
+    transform: rotate(40deg);
+    top: 1rem;
+    left: 18rem;
+    border-radius: 2.5rem;
+  }
+  .carouselLeft {
+    height: 30rem;
+  }
+  .carouselLeft .woodenBg {
+    height: 25rem;
+  }
+  .carouselLeftFront .woodenTray {
+    height: 20rem;
+    left: -10rem;
+  }
+  .carouselLeftFront .burger {
+    height: 13rem;
+    left: -8rem;
+    top: -2.5rem;
+  }
+  .carouselRight .splash {
+    height: 22rem;
     bottom: 0rem;
     right: 0;
     opacity: 80%;
+  }
 }
 
-.carouselRight .leaves{
-    height: 10rem;
-    bottom: -2rem;
-    right: -2rem;
-    opacity: 70%;
+@media (max-width: 321px) {
+    
+  .carouselLeft .tomato {
+    height: 4rem;
+    transform: rotate(40deg);
+    top: 1rem;
+    left: 18rem;
+    border-radius: 2.5rem;
+  }
+  .carouselLeft {
+    height: 28rem;
+  }
+  .carouselLeft .woodenBg {
+    height: 22rem;
+  }
+  .carouselLeft .tomato{
+    height: 3rem;
+    left: 17rem;
+  }
+  .carouselLeftFront .woodenTray {
+    height: 16rem;
+    left: -10rem;
+  }
+  .carouselLeftFront .burger {
+    height: 11rem;
+    left: -9rem;
+    top: -4rem;
+  }
+  .carouselLeftFront .leaves {
+    left: -1rem;
+    top: -6rem;
+    height: 5rem;
+  }
+  .carouselRight{
+    height: 32rem;
+  }
+  .carouselRight .splash {
+    height: 18rem;
+    bottom: 0rem;
+    right: 0;
+    opacity: 80%;
+  }
+  .carouselRight .leaves{
+    height: 5rem;
+    right: -1rem;
+  }
 }
