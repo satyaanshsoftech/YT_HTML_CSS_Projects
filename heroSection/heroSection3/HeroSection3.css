@@ -1,0 +1,143 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* images */
+.hero3Right img {
+  height: 25rem;
+}
+
+.hero3Left img {
+  height: 2rem;
+  transform: rotate(180deg);
+}
+
+.hero3Right {
+  position: relative;
+}
+
+.heroRightImg2 {
+  position: absolute;
+  left: 5rem;
+}
+
+.hero3Wrapper{
+  height: 38rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #EAF7FF,
+    #D6F0FF,
+    #BDE7FF
+  );
+}
+
+/* hero container styles */
+.hero3Container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 32rem;
+    align-items:center ;
+    place-self: center;
+    overflow: hidden;
+}
+
+/* hero left */
+.hero3Left{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.hero3Left h2{
+    font-size: 4rem;
+}
+
+.hero3Left p{
+  color: #5a5a5a;
+  font-size: 1.1rem;
+  
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.cta p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2b2a2a;
+}
+
+.cta span{
+  position: relative;
+}
+
+/* animations and transitions */
+
+/* for arrow part */
+.cta span::before{
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  top: .3rem;
+  left: -.5rem;
+  background-color: #8EDBFF;
+  position: absolute;
+  transition: all .5s;
+}
+
+.cta span:hover::before{
+  transform: scale(2);
+  left: .2rem;
+}
+
+.cta span:hover{
+  cursor: pointer;
+}
+
+/* for text */
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+@keyframes slideFromTop{
+  from{
+    transform: translateY(-2.2rem);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+.hero3Left h2{
+  animation: fadeIn 2s ease-in;
+}
+
+.hero3Left>p:first-child{
+  animation: slideFromTop 2s ease-in;
+}
+
+.cta{
+  animation: fadeIn 2s ease-in;
+}
+
+/* media queries */
