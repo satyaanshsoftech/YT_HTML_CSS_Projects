@@ -1,8 +1,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
 }
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -26,118 +25,231 @@ body {
   left: 5rem;
 }
 
-.hero3Wrapper{
+.hero3Wrapper {
   height: 38rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #EAF7FF,
-    #D6F0FF,
-    #BDE7FF
-  );
+  background: linear-gradient(135deg, #eaf7ff, #d6f0ff, #bde7ff);
 }
 
 /* hero container styles */
-.hero3Container{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    height: 32rem;
-    align-items:center ;
-    place-self: center;
-    overflow: hidden;
+.hero3Container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 32rem;
+  align-items: center;
+  place-self: center;
+  overflow: hidden;
 }
 
 /* hero left */
-.hero3Left{
-    display: flex;
-    flex-direction: column;
- 
+.hero3Left {
+  display: flex;
+  flex-direction: column;
 }
 
-.hero3Left h2{
-    font-size: 4rem;
+.hero3Left h2 {
+  font-size: 4rem;
 }
 
-.hero3Left p{
+.hero3Left p {
   color: #5a5a5a;
   font-size: 1.1rem;
-  
 }
 
-.cta{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 1.5rem;
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
 }
 
-.cta p{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2b2a2a;
+.cta p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2b2a2a;
 }
 
-.cta span{
+.cta span {
   position: relative;
 }
 
 /* animations and transitions */
 
 /* for arrow part */
-.cta span::before{
+.cta span::before {
   content: "";
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100%;
-  top: .3rem;
-  left: -.5rem;
-  background-color: #8EDBFF;
+  top: 0.3rem;
+  left: -0.5rem;
+  background-color: #8edbff;
   position: absolute;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.cta span:hover::before{
+.cta span:hover::before {
   transform: scale(2);
-  left: .2rem;
+  left: 0.2rem;
 }
 
-.cta span:hover{
+.cta span:hover {
   cursor: pointer;
 }
 
 /* for text */
-@keyframes fadeIn{
-  from{
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 100%;
   }
 }
 
-@keyframes slideFromTop{
-  from{
+@keyframes slideFromTop {
+  from {
     transform: translateY(-2.2rem);
   }
-  to{
+  to {
     transform: translateY(0);
   }
 }
 
-.hero3Left h2{
+.hero3Left h2 {
   animation: fadeIn 2s ease-in;
 }
 
-.hero3Left>p:first-child{
+.hero3Left > p:first-child {
   animation: slideFromTop 2s ease-in;
 }
 
-.cta{
+.cta {
   animation: fadeIn 2s ease-in;
 }
 
 /* media queries */
+
+@media(min-width:1440px){
+  .hero3Left h2{
+    font-size: 5.2rem;
+    font-weight: 600;
+  }
+  .hero3Container{
+    height: 38rem;
+  }
+}
+
+@media(min-width:2560px){
+  .hero3Left h2{
+    font-size: 7rem;
+    font-weight: 600;
+  }
+  .hero3Left{
+    width: 40%;
+  }
+  .hero3Container{
+    height:57rem;
+    gap: 10rem;
+  }
+  .hero3Wrapper{
+    height: 65rem;
+  }
+  .hero3Right img{
+    height: 50rem;
+  }
+  .heroRightImg2{
+    left: 10rem;
+  }
+  .hero3Left>p:first-child{
+    font-size: 1.5rem;
+  }
+  .cta p{
+    font-size: 2.5rem;
+  }
+  .cta img{
+    height: 3rem;
+  }
+  .cta{
+    gap: 3rem;
+  }
+  .cta span::before{
+    height: 2.5rem;
+    width: 2.5rem;
+    left: -.7rem;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+  .hero3Left h2 {
+    font-size: 3rem;
+  }
+  .hero3Wrapper {
+    height: 35rem;
+  }
+   .cta{
+    padding-top: 0;
+  }
+  .hero3Left{
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero3Left h2 {
+    font-size: 2rem;
+  }
+  .hero3Right img {
+    height: 20rem;
+  }
+}
+
+@media (max-width:425px){
+  .hero3Container{
+    flex-direction: column;
+    height: max-content;
+    gap: 5rem;
+    place-self: start;
+    margin-top: 2rem;
+  }
+  .hero3Wrapper{
+    min-height: 100vh;
+  }
+   .hero3Left h2 {
+    font-size: 3rem;
+  }
+   .hero3Right img {
+    height: 16rem;
+  }
+  .hero3Left > p:first-child {
+  animation: slideFromTop 1.5s ease-in;
+}
+.heroRightImg2{
+  left: 3rem;
+}
+}
+
+@media (max-width:375px){
+  .hero3Left h2{
+    font-size: 2.3rem;
+  }
+  .hero3Container{
+    gap: 3rem;
+  }
+    .hero3Right img {
+    height: 14rem;
+  }
+}
+
+@media (max-width:320px){
+     .hero3Right img {
+    height: 12rem;
+  } 
+  .hero3Left h2{
+    font-size: 2rem;
+  }
+}
